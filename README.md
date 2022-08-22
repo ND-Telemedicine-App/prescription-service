@@ -1,4 +1,4 @@
-# Getting Started
+# Prescription service
 
 ### Reference Documentation
 
