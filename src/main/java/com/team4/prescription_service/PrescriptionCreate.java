@@ -9,7 +9,7 @@ public class PrescriptionCreate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long prescription_id;
+    private int prescription_id;
 
     //user's id is stored when making a prescription
     @Column(nullable = false, unique = true, length = 20)
@@ -22,6 +22,10 @@ public class PrescriptionCreate {
     //dosage for how much the patient will take in medication
     @Column(nullable = false, length = 80)
     private String prescriptionDosage;
+
+    //prescription descriptioon
+    @Column
+    private String prescriptionDescription;
 
     //valid/approved prescription by doctor
     @Column(nullable = false)
