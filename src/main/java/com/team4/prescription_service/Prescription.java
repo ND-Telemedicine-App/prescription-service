@@ -35,5 +35,59 @@ public class Prescription {
     @Column(nullable = false)
     private Integer prescriptionRefill ;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
+    }
+
+    public Long getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(Long doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    public String getMedicineName() {
+        return medicineName;
+    }
+
+    public void setMedicineName(String medicineName) {
+        this.medicineName = medicineName;
+    }
+
+    public String getPrescriptionDosage() {
+        return prescriptionDosage;
+    }
+
+    public void setPrescriptionDosage(String prescriptionDosage) {
+        this.prescriptionDosage = prescriptionDosage;
+    }
+
+    public String getPrescriptionDescription() {
+        return prescriptionDescription;
+    }
+
+    public void setPrescriptionDescription(String prescriptionDescription) {
+        this.prescriptionDescription = prescriptionDescription;
+    }
+
+    public Integer getPrescriptionRefill() {
+        return prescriptionRefill;
+    }
+
+    public void setPrescriptionRefill(Integer prescriptionRefill) {
+        this.prescriptionRefill = prescriptionRefill;
+    }
 }
