@@ -24,6 +24,10 @@ public class PrescriptionService {
         return prescriptionRepository.findPrescriptionByPatientId(patientId);
     }
 
+    public List<Prescription> findByDoctorId(Long doctorId) {
+        return prescriptionRepository.findPrescriptionByDoctorId(doctorId);
+    }
+
     public Prescription findByMedicineName(String medicineName) {
         return prescriptionRepository.findByMedicineName(medicineName);
     }

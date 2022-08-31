@@ -19,6 +19,12 @@ public class PrescriptionController {
         return prescriptionService.findByPatientId(patientId);
     }
 
+    @GetMapping(value = "/{doctorId}")
+    public List<Prescription> viewDoctorPrescribedPrescription(@PathVariable Long doctorId){
+        return prescriptionService.findByDoctorId(doctorId);
+    }
+
+
     @PostMapping("/createPrescription")
     public Prescription createPrescription(@RequestBody Prescription newPrescription) {
         return prescriptionService.create(newPrescription);
