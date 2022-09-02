@@ -90,4 +90,18 @@ public class Prescription {
     public void setPrescriptionRefill(Integer prescriptionRefill) {
         this.prescriptionRefill = prescriptionRefill;
     }
+
+    @Override
+    public String toString() {
+        return "Prescription{" +
+                "id=" + id +
+                ", patientId=" + patientId +
+                ", doctorId=" + doctorId +
+                ", medicineName='" + medicineName + '\'' +
+                ", prescriptionDosage='" + prescriptionDosage + '\'' +
+                ", prescriptionDescription='" + prescriptionDescription + '\'' +
+                ", prescriptionRefill=" + prescriptionRefill +
+                '}';
+    }
 }
+
