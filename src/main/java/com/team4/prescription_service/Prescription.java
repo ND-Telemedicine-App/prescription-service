@@ -12,28 +12,28 @@ public class Prescription {
     private Long id;
 
     //user's id is stored when making a prescription
-    @Column(nullable = false, unique = true, length = 20)
+    @Column(nullable = false)
     private Long patientId;
 
     //user's id is stored when making a prescription
-    @Column(nullable = false, unique = true, length = 20)
+    @Column(nullable = false)
     private Long doctorId;
 
     //prescription name
-    @Column(nullable = false, length = 65)
+    @Column(nullable = false)
     private String medicineName;
 
-    //dosage for how much the patient will take in medication
-    @Column(nullable = false, length = 80)
+    // instructions on how much and when to take medicine
+    @Column(nullable = false)
     private String prescriptionDosage;
 
-    //prescription descriptioon
-    @Column
-    private String prescriptionDescription;
-
-    //how many more refills are required on the tailored prescribed medicene
+    //prescription dispense amount
     @Column(nullable = false)
-    private Integer prescriptionRefill ;
+    private String prescriptionDispense;
+
+    //how many more refills are required on the tailored prescribed medicine
+    @Column(nullable = false)
+    private Integer prescriptionRefill;
 
     public Long getId() {
         return id;
@@ -75,12 +75,12 @@ public class Prescription {
         this.prescriptionDosage = prescriptionDosage;
     }
 
-    public String getPrescriptionDescription() {
-        return prescriptionDescription;
+    public String getPrescriptionDispense() {
+        return prescriptionDispense;
     }
 
-    public void setPrescriptionDescription(String prescriptionDescription) {
-        this.prescriptionDescription = prescriptionDescription;
+    public void setPrescriptionDispense(String prescriptionDescription) {
+        this.prescriptionDispense = prescriptionDescription;
     }
 
     public Integer getPrescriptionRefill() {
@@ -99,7 +99,7 @@ public class Prescription {
                 ", doctorId=" + doctorId +
                 ", medicineName='" + medicineName + '\'' +
                 ", prescriptionDosage='" + prescriptionDosage + '\'' +
-                ", prescriptionDescription='" + prescriptionDescription + '\'' +
+                ", prescriptionDescription='" + prescriptionDispense + '\'' +
                 ", prescriptionRefill=" + prescriptionRefill +
                 '}';
     }

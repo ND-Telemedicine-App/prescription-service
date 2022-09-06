@@ -5,10 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-
 public class PrescriptionService {
-
-
 
     private final PrescriptionRepository prescriptionRepository;
 
@@ -28,7 +25,7 @@ public class PrescriptionService {
         return prescriptionRepository.findPrescriptionByDoctorId(doctorId);
     }
 
-    public Prescription findByMedicineName(String medicineName) {
+    public List<Prescription> findByMedicineName(String medicineName) {
         return prescriptionRepository.findByMedicineName(medicineName);
     }
 
