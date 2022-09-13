@@ -1,8 +1,14 @@
 package com.team4.prescription_service;
 
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "prescriptions")
 public class Prescription {
 
