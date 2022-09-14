@@ -39,6 +39,20 @@ public class Prescription {
     @Column(nullable = false)
     private Date prescriptionDate;
 
+    public Prescription() {
+    }
+
+    public Prescription(Long id, Long patientId, Long doctorId, String medicineName, String prescriptionDosage, String prescriptionDispense, String prescriptionRefill, Date prescriptionDate) {
+        this.id = id;
+        this.patientId = patientId;
+        this.doctorId = doctorId;
+        this.medicineName = medicineName;
+        this.prescriptionDosage = prescriptionDosage;
+        this.prescriptionDispense = prescriptionDispense;
+        this.prescriptionRefill = prescriptionRefill;
+        this.prescriptionDate = prescriptionDate;
+    }
+
     @PrePersist
     private void onCreate() {
         prescriptionDate = new Date(System.currentTimeMillis());
