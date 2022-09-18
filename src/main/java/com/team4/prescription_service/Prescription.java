@@ -1,6 +1,7 @@
 package com.team4.prescription_service;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "prescriptions")
@@ -16,7 +17,7 @@ public class Prescription {
     private Long patientId;
 
     //user's id is stored when making a prescription
-    @Column(nullable = false)
+    @Column
     private Long doctorId;
 
     //prescription name
@@ -33,7 +34,29 @@ public class Prescription {
 
     //how many more refills are required on the tailored prescribed medicine
     @Column(nullable = false)
-    private Integer prescriptionRefill;
+    private String prescriptionRefill;
+
+    @Column(nullable = false)
+    private Date prescriptionDate;
+
+    public Prescription() {
+    }
+
+    public Prescription(Long id, Long patientId, Long doctorId, String medicineName, String prescriptionDosage, String prescriptionDispense, String prescriptionRefill, Date prescriptionDate) {
+        this.id = id;
+        this.patientId = patientId;
+        this.doctorId = doctorId;
+        this.medicineName = medicineName;
+        this.prescriptionDosage = prescriptionDosage;
+        this.prescriptionDispense = prescriptionDispense;
+        this.prescriptionRefill = prescriptionRefill;
+        this.prescriptionDate = prescriptionDate;
+    }
+
+    @PrePersist
+    private void onCreate() {
+        prescriptionDate = new Date(System.currentTimeMillis());
+    }
 
     public Long getId() {
         return id;
@@ -83,12 +106,20 @@ public class Prescription {
         this.prescriptionDispense = prescriptionDescription;
     }
 
-    public Integer getPrescriptionRefill() {
+    public String getPrescriptionRefill() {
         return prescriptionRefill;
     }
 
-    public void setPrescriptionRefill(Integer prescriptionRefill) {
+    public void setPrescriptionRefill(String prescriptionRefill) {
         this.prescriptionRefill = prescriptionRefill;
+    }
+
+    public Date getPrescriptionDate() {
+        return prescriptionDate;
+    }
+
+    public void setPrescriptionDate(Date prescriptionDate) {
+        this.prescriptionDate = prescriptionDate;
     }
 
     @Override
@@ -99,8 +130,9 @@ public class Prescription {
                 ", doctorId=" + doctorId +
                 ", medicineName='" + medicineName + '\'' +
                 ", prescriptionDosage='" + prescriptionDosage + '\'' +
-                ", prescriptionDescription='" + prescriptionDispense + '\'' +
-                ", prescriptionRefill=" + prescriptionRefill +
+                ", prescriptionDispense='" + prescriptionDispense + '\'' +
+                ", prescriptionRefill='" + prescriptionRefill + '\'' +
+                ", prescriptionDate=" + prescriptionDate +
                 '}';
     }
 }
