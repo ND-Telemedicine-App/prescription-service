@@ -31,7 +31,7 @@ class PrescriptionServiceApplicationTests {
     }
 
     @Test
-//    should return the prescription with the input ID
+//  the prescription retrieved with ID 1 should have the same attributes as the attributes entered above
     void viewPrescription() {
         Prescription expectedPrescription = prescriptionService.findById(1L);
         assertEquals(1L, expectedPrescription.getPatientId());
@@ -43,28 +43,28 @@ class PrescriptionServiceApplicationTests {
     }
 
     @Test
-//    should return all prescriptions with the input patientId
+//    should return the correct number of prescriptions with the specific patient ID
     void viewPrescriptionOfPatient() {
         List<Prescription> prescriptions = prescriptionService.findByPatientId(2L);
         assertThat(prescriptions.size()).isEqualTo(2);
     }
 
     @Test
-//    should return all prescriptions with the input doctorId
+//    should return the correct number of prescriptions with the specific doctor ID
     void viewDoctorPrescribedPrescription() {
         List<Prescription> prescriptions = prescriptionService.findByDoctorId(3L);
         assertThat(prescriptions.size()).isEqualTo(1);
     }
 
     @Test
-//    should return all prescriptions with the input medicine name
+//   should return the correct number of prescriptions with the medicine name
     void findByMedicineName(){
         List<Prescription> prescriptions = prescriptionService.findByMedicineName("Asprin");
         assertThat(prescriptions.size()).isEqualTo(2);
     }
 
     @Test
-//   After call the create function, the new prescription object should be in the database
+//   the new prescription should be created and can be found in the database
     void createPrescription() {
         prescriptionService.create(new Prescription(4L, 4L, 5L, "Systane", "2 per day", "For Fever", "5",new Date(System.currentTimeMillis())));
         assertNotNull(prescriptionService.findById(4L));
