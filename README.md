@@ -32,5 +32,7 @@ Google Docs : https://drive.google.com/xxxx
 To run the application locally :
 
 1. Setup localhost in MySql Workbench
-2. Create new shcema nd-telemedicine-app
-3. run "PrescriptionServiceApplication" located: src/main/java/com/team4/prescription_service
+2. Create new schema nd-telemedicine-app
+3. Go to target/classes/application.properties and Edit "spring.datasource.password" field with your own MySql Password
+4. Run "PrescriptionServiceApplication" located: src/main/java/com/team4/prescription_service
+5. If done correctly you can refresh schemas and there should be a new table under nd-telemedicine-app
