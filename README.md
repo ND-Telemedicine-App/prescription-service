@@ -1,22 +1,24 @@
-# Prescription service
+**RMIT SEPT 2021 Major Project Team 4**
 
-### Reference Documentation
+**Members:**
+-Doan Yen Nhi (s3880599)
+-Nguyen Hoang Linh (s3880313)
+-Jack Dean (s3722961)
+-Matthew Rigo (s3840775)
+-Mingkai Wang (s3773115)
 
-For further reference, please consider the following sections:
+**Records**
+Github repository : https://github.com/ND-Telemedicine-App
+jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiMzI5YzNmOWIzODBhNDY1NThhYjAyODczM2NmM2EzNTYiLCJwIjoiaiJ9
+Google Docs : https://drive.google.com/xxxx
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.3/maven-plugin/reference/html/#build-image)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.3/reference/htmlsingle/#data.sql.jpa-and-spring-data)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.3/reference/htmlsingle/#web)
+**Code documentation - Release 0.1.0 - date**
+-feature 1
+-feature 2
+-feature 3
 
-### Guides
+To run the application locally :
 
-The following guides illustrate how to use some features concretely:
-
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-
+1. Setup localhost in MySql Workbench
+2. Create new shcema nd-telemedicine-app
+3. run "PrescriptionServiceApplication" located: src/main/java/com/team4/prescription_service
