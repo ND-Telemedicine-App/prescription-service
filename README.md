@@ -13,9 +13,21 @@ jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boar
 Google Docs : https://drive.google.com/xxxx
 
 **Code documentation - Release 0.1.0 - date**
--feature 1
--feature 2
--feature 3
+- Prescription Class
+- Prescription Controller:
+  > Prescription View API (All Prescriptions, Prescriptions by Id, Prescriptions by Doctor Id)
+  > Prescription Create API
+- Prescription Service:
+  > findById method
+  > findByPatientId method
+  > findByDoctorId method
+  > findByMedicineName method
+  > create method
+- Prescription Repository:
+  > findPrescriptionById
+  > findPrescriptionByPatientId
+  > findPrescriptionByDoctorId
+  > findByMedicineName
 
 To run the application locally :
 
