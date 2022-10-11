@@ -15,7 +15,7 @@ public class Prescription {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     //user's id is stored when making a prescription
