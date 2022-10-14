@@ -11,8 +11,11 @@
 Github repository : https://github.com/ND-Telemedicine-App
 jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiMzI5YzNmOWIzODBhNDY1NThhYjAyODczM2NmM2EzNTYiLCJwIjoiaiJ9
 
-**Code documentation - Release 0.1.0 - date**
+**Code documentation - Release 0.1.0 Major changes & Features - Date: 6/9/22**
 - Prescription Class
+  > Attributes
+  > Getters and setters
+  > To String method
 - Prescription Controller:
   > Prescription View API (All Prescriptions, Prescriptions by Id, Prescriptions by Doctor Id)
   > Prescription Create API
@@ -27,8 +30,18 @@ jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boar
   > findPrescriptionByPatientId
   > findPrescriptionByDoctorId
   > findByMedicineName
+- PrescriptionServiceApplicationTests:
+  > Created various tests for the APIs
 
-To run the application locally :
+**Code documentation - Release 0.1.1 Major changes & Features - Date: 19/9/22**
+- All classes:
+  > Debug and code cleanup
+  > Modify and implemented more comments on code
+  > CI Build and test
+- PrescriptionServiceApplicationTests:
+  > Added comments for tests
+
+To run this service locally on MySQL:
 
 1. Setup localhost in MySql Workbench
 2. Create new schema nd-telemedicine-app
