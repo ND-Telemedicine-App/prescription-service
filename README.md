@@ -1,5 +1,5 @@
-<h1>ND Telemedicine App</h1>
-<h2>RMIT SEPT 2021 Major Project Team 4</h2>
+<h1>ND Telemedicine App - Prescription Service</h1>
+<h2>RMIT SEPT 2022 Major Project Team 4</h2>
 
 **Members:** 
 - Doan Yen Nhi (s3880599)   
